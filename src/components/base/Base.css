@@ -1,0 +1,22 @@
+.baseBox{
+    font-family: Arial, Verdana,sans-serif;
+	background-color: #1b092c;
+	position: sticky ;
+	width: 100%;
+	top: 0;
+	color: white;
+	padding: 1px;
+	text-align: justify;
+    height: 60px;
+    display: flex;
+    align-items:center; 
+    margin-top: -5px;
+    z-index: 100;;
+} 
+.maryamBox {
+    padding:5px;
+}
+.search{
+    width: 100%;
+    text-align: center;
+}
