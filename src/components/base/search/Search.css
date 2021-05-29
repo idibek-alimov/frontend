@@ -25,3 +25,15 @@
     font-weight: bolder;
     
 }
+
+.selectCategory{
+	border:none;
+	padding-top:8px;
+	padding-bottom: 8px;
+	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+	background-color: rgba(235, 154, 62, 0.753);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.selectCategory::-ms-expand {    display: none;}
