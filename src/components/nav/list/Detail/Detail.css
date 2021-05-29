@@ -1,0 +1,38 @@
+.detailBox{
+    display: flex;
+    flex-direction: row;
+    margin:10px;
+    padding: 10px;
+}
+.detailPic{
+    border:1px solid black;
+    border-radius: 7px;
+    width: 25%;
+    height: 200px;
+    text-align: center;
+    align-content: center;
+
+}
+.detailData{
+    margin:10px;
+    padding:10px;
+
+}
+.detailNamePrice{
+    padding:10px;
+    margin:10px;
+    justify-content: space-around;
+
+}
+.detailNamePrice span {
+    
+    padding:10px;
+}
+.detailSize{
+    padding:10px;
+    margin:10px;
+}
+.detailDescription{
+    padding:10px;
+    margin:10px;
+}

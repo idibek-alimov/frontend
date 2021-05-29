@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import List from './list/List'
 import AddProduct from '../addProduct/AddProduct'
 import ConnectedSearch from '../search/ConnectedSearch'
+import Detail from './list/Detail/Detail'
 const Nav = () => {
     return <div>
         <Switch>
@@ -12,6 +13,7 @@ const Nav = () => {
           <Route path='/search/'>
               <ConnectedSearch/>
           </Route>
+          <Route path='/detail/:id/' component={Detail}/>
           <Route path='/'>
               <List/>
           </Route>
