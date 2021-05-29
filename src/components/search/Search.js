@@ -5,7 +5,7 @@ import {store} from '../../store/store'
 const Search = ({ search }) =>{
   const [products,setProducts]  = useState()
   useEffect(()=>{
-      axios.get(`https://young-escarpment-92727.herokuapp.com/${search.categoryID}/${search.searchText}`,store.getState().token)
+      axios.get(`https://maryam-backend.herokuapp.com/${search.categoryID}/${search.searchText}`)
            .then(res=>setProducts(res.data.results))
            .catch(err=>console.log(err))
            
