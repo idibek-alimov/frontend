@@ -21,11 +21,16 @@ const Detail = ({match}) => {
             </div>
             <div className='detailData'>
                 <div className='detailNamePrice'>
-                    <span>{product.name}</span>
-                    <span>{product.price} .cc</span>
+                    <span>Name: {product.name}</span>
+                    <span>Price:{product.price} .cc</span>
                 </div>
                 <div className='detailSize'>
-                    <span>{product.size}</span>
+                    <span> Sizes: {product.size.map(size=>{
+                        return <span> { size }  </span>
+                        }
+                        )
+                        }
+                    </span>
                 </div>
                 <div className='detailDescription'>
                     <p>{product.description}</p>

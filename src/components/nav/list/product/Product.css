@@ -12,13 +12,19 @@
     margin:5px;
     padding:5px;
 }
-.link{
+.productLink{
+    text-decoration-line: none;
+    text-decoration:none;
+}
+    
+
+.productDetail{
     text-decoration: none;
     color: black;
-    background-color: violet;
 }
 .productName{
     text-decoration: none;
+    text-transform: none;
 }
 .productPrice{
     text-decoration: none;

@@ -9,7 +9,7 @@ const Product = (props) => {
     
     return <div>
       <div className='productBox'>
-        <Link to={`/detail/${props.product.id}`} >
+        <Link className='registerLink' to={`/detail/${props.product.id}`} >
           <div className='productPic'>
 
           </div>
