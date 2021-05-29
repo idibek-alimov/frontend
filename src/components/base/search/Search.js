@@ -25,7 +25,7 @@ const Search = () => {
 
     return <div>
         <div className='searchBox'>
-            <form onSubmit={onFormSubmit}> 
+            <form className='searchBox' onSubmit={onFormSubmit}> 
                 <button className='all'>All</button>
                 <input className='searchInput' onChange={onInputChange} />
                 <button className='searchSubmit' type='submit' >Submit</button>

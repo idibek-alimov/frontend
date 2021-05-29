@@ -1,6 +1,7 @@
-.searchBox {
-    align-content: center;
-    width: 100%;
+.searchBox{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
 }
 .all{
     border-radius: 5px 0px 0px 5px;

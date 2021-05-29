@@ -8,7 +8,7 @@ const Base = () => {
     return <div>
         <div className='baseBox'>
             <div className='maryamBox'>
-                <h1>Maryam.tj</h1>
+                <h2>Maryam</h2>
             </div>
             <Search className='search'/>
             {localStorage.getItem('token') ? <Profile/> : <Register/>} 
