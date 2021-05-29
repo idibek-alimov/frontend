@@ -7,11 +7,13 @@
     border-radius: 5px 0px 0px 5px;
     border:none;
     padding:8px;
+    
 }
 
 .searchInput{
     border:none;   
     padding:8px; 
+    width: 100%;
     
 }
 .searchSubmit {
@@ -21,4 +23,5 @@
     background-color: rgb(138, 60, 8);
     color: white;
     font-weight: bolder;
+    
 }

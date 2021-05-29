@@ -1,6 +1,28 @@
-.productAdd {
-    margin:5px;
-    padding:5px;
-    color:aqua;
-    text-align: right;     
+.profileDrop{
+    z-index: 100;
+
+}
+.profileDropHover{
+    margin: 20px;
+
+}
+.profileDropContent{
+    border-radius: 5px;
+    position:absolute;
+    display: none;
+    
+    background-color: rgb(253, 253, 253);
+    margin-top:-20px;
+    color:black;
+    padding:20px;
+    margin-left: -40px;
+}
+.profileDrop:hover .profileDropContent{
+    display: block;
+    z-index: 1;
+    
+}
+.addProductLink{
+    text-decoration: none;
+    color:black;
 }

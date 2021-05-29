@@ -6,20 +6,36 @@
 	top: 0;
 	color: white;
 	padding: 1px;
-	text-align: justify;
-    height: 60px;
-    display: flex;
-    align-items:center; 
+    display: flexbox;
+    flex-direction: block;
     margin-top: -5px;
-    z-index: 100;;
+    
 } 
-.maryamBox {
-    padding:5px;
+.baseTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -13px;
+}
+.maryamBox{
+    align-items: left;
+}
+.profileOrRegister{
+    align-items: right;
 }
 .search{
     display: inline;
+    width: 100%;
+}
+.baseBottom{
+    margin:1px 4px 1px 4px;
 }
 .maryamLink{
     text-decoration: none;
     color: white;
+}
+.baseProfileBox{
+    align-items: right;
+    left: 0;
 }

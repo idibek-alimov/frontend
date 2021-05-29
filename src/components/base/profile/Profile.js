@@ -8,9 +8,18 @@ const Profile = () => {
         window.location.reload() 
     }
     return <div>
-        <div className='productAdd'>
-            <span><Link to='/add'>add product </Link></span>
-            <button onClick={onLogout}>logout</button>
+        <div className='profileDrop'>
+                <div className='profileDropHover'>
+                    <h2>profile</h2>
+                </div>
+                <div className='profileDropContent'>
+                    <span className='addProductLink'><Link className='addProductLink' to='/add'>add product </Link></span>
+                    <p></p>
+                    <span onClick={onLogout}>logout</span> 
+                    <p></p>
+                    <span className='addProductLink'><Link className='addProductLink' to='/myproducts'>my product </Link></span>
+                </div>
+                
         </div>
         
     </div>

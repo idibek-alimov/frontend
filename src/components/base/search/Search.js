@@ -19,10 +19,6 @@ const Search = () => {
         window.location.reload()
         
     }
-    
-        
-    
-
     return <div>
         <div className='searchBox'>
             <form className='searchBox' onSubmit={onFormSubmit}> 

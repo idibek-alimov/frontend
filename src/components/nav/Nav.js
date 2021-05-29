@@ -4,15 +4,22 @@ import List from './list/List'
 import AddProduct from '../addProduct/AddProduct'
 import ConnectedSearch from '../search/ConnectedSearch'
 import Detail from './list/Detail/Detail'
+import MyProducts from '../Profile/myProducts/MyProducts'
+
 const Nav = () => {
     return <div>
         <Switch>
           <Route path='/add/' exact>
             <AddProduct/>
           </Route>
-          <Route path='/search/'>
-              <ConnectedSearch/>
+          <Route path='/search/' exact>
+              <ConnectedSearch />
           </Route>
+          <Route path='/myproducts/'>
+              <MyProducts />
+          </Route> 
+
+
           <Route path='/detail/:id/' component={Detail}/>
           <Route path='/'>
               <List/>
