@@ -22,14 +22,14 @@ const AddProduct = () => {
     }
     const onSubmitForm = (evt) =>{
         evt.preventDefault()
-        axios.post('https://young-escarpment-92727.herokuapp.com/',product,config)
+        axios.post('https://maryam-backend.herokuapp.com/',product,config)
              .then(res=>console.log(res))
              .catch(err=>console.log(err))
         //console.log(`Token ${JSON.parse(localStorage.getItem('token')).key}`)
     }
     const onInputChange = (evt) => {
         product[evt.target.name] = evt.target.value
-        console.log(product)
+        //console.log(product)
 
     }
     return <div>
