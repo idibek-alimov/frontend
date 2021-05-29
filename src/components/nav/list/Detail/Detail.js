@@ -7,7 +7,7 @@ const Detail = ({match}) => {
     const [product,setProduct] = useState()
 
     useEffect(()=>{
-        axios.get(`https://young-escarpment-92727.herokuapp.com/${match.params.id}`)
+        axios.get(`https://maryam-backend.herokuapp.com/${match.params.id}`)
              .then(res=>setProduct(res.data))
              .catch(err=>console.log(err)) 
 

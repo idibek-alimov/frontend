@@ -7,7 +7,7 @@ import './List.css'
 const List = () => {
     const [products,setProducts] = useState()
     useEffect(()=>{
-        axios.get('https://young-escarpment-92727.herokuapp.com')
+        axios.get('https://maryam-backend.herokuapp.com')
              .then(res=>setProducts(res.data.results))
              .catch(err=>console.log('failed'))      
     },[])

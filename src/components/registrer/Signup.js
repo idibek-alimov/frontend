@@ -20,7 +20,7 @@ const Signup = () => {
     const onFormSubmit = (evt) => {
         evt.preventDefault()
         //console.log(credentials)
-        axios.post('https://young-escarpment-92727.herokuapp.com/rest-auth/registration/',credentials)
+        axios.post('https://maryam-backend.herokuapp.com/rest-auth/registration/',credentials)
              .then(res=>setToken(res.data))
              .catch(err=>console.log(err))
              window.location.reload()      
