@@ -17,7 +17,7 @@ const Detail = ({match}) => {
         {product ?
         <div className='detailBox'>
             <div className='detailPic'>
-                this is where the pic will be
+                <img className='detailPicImage' src={product.image}/>
             </div>
             <div className='detailData'>
                 <div className='detailNamePrice'>

@@ -1,11 +1,12 @@
 import React from 'react'
 import {store} from '../../../store/store'
 import {removeFromCart} from '../../../store/actions'
-
+import './Cart.css'
 const Product = ({category,id,name,price,image,description,author,likes_product  }) =>
-  <div className='sectionProduct' key={id}>            
-    <img className='sectionImage' src={image} />
-    <img className='sectionImageZoom' src={image} />
+  <div className='sectionProduct' key={id}>
+    <div className='sectionImageBox'>             
+        <img className='sectionImage' src={image} />
+    </div>
     <div className='sectionDesctioption'>
       <span className='sectionName'>{name}</span>
       <span className='sectionPrice'>{price} cc.</span>

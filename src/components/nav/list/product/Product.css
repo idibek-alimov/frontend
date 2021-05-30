@@ -12,7 +12,14 @@
 .productPic {
     margin:1px;
     padding:1px;
+    width:200px;
+    height: 200px;
 }
+.productPicImage{
+    width:200px;
+    height: 200px;
+}
+
 .productLink{
     text-decoration-line: none;
     text-decoration:none;
