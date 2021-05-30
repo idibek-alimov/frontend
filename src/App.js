@@ -13,22 +13,26 @@ const App = () => {
   return <div>
     
     <Router>
-      <Base />
-      <Switch>
-        <Route path='/login/' exact>
-          <Login/>
-        </Route>
-        <Route path='/signup/' exact>
-          <Signup/>
-        </Route>
-        <Route path='/'  >
-          <Provider store={store}>
+        <Provider store={store}>
             <PersistGate loading={null} persistor = {persistor}> 
-              <Nav/>
+                <Base />
+                <Switch>
+                    <Route path='/login/' exact>
+                        <Login/>
+                    </Route>
+                    <Route path='/signup/' exact>
+                        <Signup/>
+                    </Route>
+                    <Route path='/'  >
+                        {/* <Provider store={store}>
+                          <PersistGate loading={null} persistor = {persistor}>  */}
+                        <Nav/>
+            {/* </PersistGate> 
+          </Provider>    */}
+                    </Route>
+                </Switch>
             </PersistGate> 
-          </Provider>   
-        </Route>
-      </Switch>
+        </Provider> 
     </Router>    
     <Bottom/>
   </div>

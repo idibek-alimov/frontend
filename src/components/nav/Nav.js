@@ -5,6 +5,7 @@ import AddProduct from '../addProduct/AddProduct'
 import ConnectedSearch from '../search/ConnectedSearch'
 import Detail from './list/Detail/Detail'
 import MyProducts from '../Profile/myProducts/MyProducts'
+import ConnectedCart from '../base/cart/ConnectedCart'
 
 const Nav = () => {
     return <div>
@@ -18,6 +19,9 @@ const Nav = () => {
           <Route path='/myproducts/'>
               <MyProducts />
           </Route> 
+          <Route path='/cart'>
+              <ConnectedCart/>
+          </Route>
 
 
           <Route path='/detail/:id/' component={Detail}/>

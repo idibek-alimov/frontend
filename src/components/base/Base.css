@@ -39,3 +39,12 @@
     align-items: right;
     left: 0;
 }
+.baseCart{
+    display: flex;
+    flex-direction: block;
+    align-items: center;
+}
+.cartLink{
+    text-decoration: none;
+    color: white;
+}

@@ -1,18 +1,17 @@
 .productBox {
     border:1px solid black;
     border-radius: 5px;
-    margin:5px;
-    padding:20px;
-    width:150px;
-    height: 150px;
+    margin:4px;
+    padding:2px;
+   
 }
 .productBox:hover{
     background-color: rgb(226, 220, 209);
     
 }
 .productPic {
-    margin:5px;
-    padding:5px;
+    margin:1px;
+    padding:1px;
 }
 .productLink{
     text-decoration-line: none;
