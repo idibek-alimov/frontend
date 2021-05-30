@@ -1,8 +1,14 @@
 import React from 'react'
 import './Profile.css'
 import {Link} from 'react-router-dom'
+import DehazeIcon from '../../../../node_modules/@material-ui/icons/Dehaze';
+import { useTranslation } from "react-i18next";
+import '../../../locals/i18n';
+
 
 const Profile = () => {
+    const { t } = useTranslation(); 
+
     const onLogout = () => {
         localStorage.removeItem('token');
         window.location.reload() 
@@ -10,14 +16,14 @@ const Profile = () => {
     return <div>
         <div className='profileDrop'>
                 <div className='profileDropHover'>
-                    <h2>profile</h2>
+                    <DehazeIcon />
                 </div>
                 <div className='profileDropContent'>
-                    <span className='addProductLink'><Link className='addProductLink' to='/add'>add product </Link></span>
+                    <span className='addProductLink'><Link className='addProductLink' to='/add'>{t("addProduct")}</Link></span>
                     <p></p>
-                    <span onClick={onLogout}>logout</span> 
+                    <span onClick={onLogout}>{t("logout")}</span> 
                     <p></p>
-                    <span className='addProductLink'><Link className='addProductLink' to='/myproducts'>my product </Link></span>
+                    <span className='addProductLink'><Link className='addProductLink' to='/myproducts'>{t("myProducts")}</Link></span>
                 </div>
                 
         </div>

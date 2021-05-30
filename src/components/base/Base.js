@@ -6,6 +6,7 @@ import Register from './register/Register'
 import Profile from './profile/Profile'
 import ShoppingCartOutlinedIcon from '../../../node_modules/@material-ui/icons/ShoppingCartOutlined';
 import ConnectedCartCount from './cart/ConnectedCartCount'
+import Trans from './translation/Trans'
 const Base = () => {
     return <div>
         <div className='baseBox'>
@@ -15,9 +16,12 @@ const Base = () => {
                 </div>
                 <div className='baseCart'>
                     <Link className='cartLink' to={'/cart'}>
-                        <ShoppingCartOutlinedIcon style={ {height: 40, width: 40} } />
+                        <ShoppingCartOutlinedIcon  style={ {height: 40, width: 40} } />
                     </Link>
                     <ConnectedCartCount className='baseCartCount' />
+                </div>
+                <div>
+                    <Trans />
                 </div>
                 <div className='profileOrRegister'>
                   {localStorage.getItem('token') ? <Profile className='baseProfileBox'/> : <Register/>} 

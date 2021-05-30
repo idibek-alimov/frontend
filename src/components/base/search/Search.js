@@ -4,6 +4,8 @@ import {store}from '../../../store/store'
 import {refreshTheSearch} from '../../../store/actions'
 import {Redirect,useHistory} from 'react-router-dom'
 import axios from 'axios'
+import SearchIcon from '../../../../node_modules/@material-ui/icons/Search';
+
 const Search = () => {
     let search='';
     let categoryID = 0;
@@ -44,7 +46,9 @@ const Search = () => {
               
                 </select>
                 <input className='searchInput' onChange={onInputChange} />
-                <button className='searchSubmit' type='submit' >Submit</button>
+                <button className='searchSubmit' type='submit' >
+                    <SearchIcon/>
+                </button>
             </form>
         </div>
     </div>

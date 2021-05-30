@@ -1,0 +1,8 @@
+.transSelector{
+    -webkit-appearance: none;
+	-moz-appearance: none;
+    padding:5px;
+    border-radius: 5px;
+    background-color: rgb(195, 181, 207);
+    border-color: blueviolet;
+}

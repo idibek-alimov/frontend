@@ -8,7 +8,8 @@
 	padding: 1px;
     display: flexbox;
     flex-direction: block;
-    margin-top: -5px;
+    margin: -8px -18px 0px -8px;
+    padding: 5px;
     
 } 
 .baseTop{
