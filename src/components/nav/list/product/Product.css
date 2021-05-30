@@ -37,3 +37,10 @@
 .productPrice{
     text-decoration: none;
 }
+.addToCart{
+    text-align:left;
+    border-color: rgba(94, 56, 32, 0.842);
+    border-radius: 10px;
+    background-color: rgb(73, 153, 104);
+    color:white;
+}

@@ -1,6 +1,7 @@
 .detailBox{
-    display: flex;
-    flex-direction: row;
+    display: flexbox;
+    flex-direction: block;
+    
     margin:10px;
     padding: 10px;
 }

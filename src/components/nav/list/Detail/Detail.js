@@ -1,6 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import './Detail.css'
 import axios from 'axios'
+import ShoppingCartOutlinedIcon from '../../../../../node_modules/@material-ui/icons/ShoppingCartOutlined';
+import {store} from '../../../../store/store'
+import {addToCart} from '../../../../store/actions'
+
 
 const Detail = ({match}) => {
     //console.log(match.params.id)
@@ -36,6 +40,13 @@ const Detail = ({match}) => {
                     <p>{product.description}</p>
                 </div>
             </div>
+            <div>
+              <button className='addToCart' onClick={()=>{
+                  store.dispatch(addToCart(product))
+                  }}>
+                 <ShoppingCartOutlinedIcon className=''/>
+              </button>
+            </div>    
         </div>
         : 'this product is no longer awailable'}
     </div>

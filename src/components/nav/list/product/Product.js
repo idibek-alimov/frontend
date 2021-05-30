@@ -4,6 +4,9 @@ import {store} from '../../../../store/store'
 import './Product.css'
 import {Link} from 'react-router-dom'
 import {addToCart} from '../../../../store/actions'
+import ShoppingCartOutlinedIcon from '../../../../../node_modules/@material-ui/icons/ShoppingCartOutlined';
+
+
 const Product = (props) => {
     
     
@@ -23,11 +26,13 @@ const Product = (props) => {
               
           </div>
           </Link>
+          <div>
           <button className='addToCart' onClick={()=>{
                   store.dispatch(addToCart(props.product))
                   }}>
-                 add to the cart
+                 <ShoppingCartOutlinedIcon className=''/>
           </button>
+          </div>
       </div>
     </div>  
 }
