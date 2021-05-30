@@ -8,7 +8,8 @@ import Signup from './components/registrer/Signup'
 import { store,persistor}  from './store/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
-import {addToken} from './store/actions'
+import {addToken,addUsername} from './store/actions'
+import axios from 'axios'
 
 const App = () => {
   useEffect(()=>{
@@ -19,8 +20,11 @@ const App = () => {
             Authorization: `Token ${JSON.parse(localStorage.getItem('token')).key}`,
             }
         }));
-    }  
-    //console.log(`Token ${JSON.parse(localStorage.getItem('token')).key}`)  
+      axios.get('https://maryam-backend.herokuapp.com/rest-auth/user/',store.getState().token)
+           .then(res=>store.dispatch(addUsername(res.data.username)))
+           .catch(err=>console.log(err))  
+           //store.dispatch(addUsername(res.data.username));
+    }   
   },[])
  
   

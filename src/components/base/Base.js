@@ -7,7 +7,12 @@ import Profile from './profile/Profile'
 import ShoppingCartOutlinedIcon from '../../../node_modules/@material-ui/icons/ShoppingCartOutlined';
 import ConnectedCartCount from './cart/ConnectedCartCount'
 import Trans from './translation/Trans'
+import {store} from '../../store/store'
+import { useTranslation } from "react-i18next";
+import '../../locals/i18n';
+
 const Base = () => {
+    const { t } = useTranslation();  
     return <div>
         <div className='baseBox'>
             <div className='baseTop'>
@@ -22,6 +27,13 @@ const Base = () => {
                 </div>
                 <div>
                     <Trans />
+                </div>
+                <div>
+                  { localStorage.getItem('token') ? 
+                  <div>
+                      {t("hello")},<b>{store.getState().username}</b>
+                  </div>
+                  : ''} 
                 </div>
                 <div className='profileOrRegister'>
                   {localStorage.getItem('token') ? <Profile className='baseProfileBox'/> : <Register/>} 

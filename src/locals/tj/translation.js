@@ -1,4 +1,5 @@
 export const TRANSLATION_TJ = {
+    hello: 'Салом',
     founder: 'коркарди Алимов',
     addProduct: 'иловаи махсулот',
     logout: 'хорич',
