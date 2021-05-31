@@ -37,10 +37,12 @@ const Search = () => {
         <div className='searchBox'>
             <form className='searchBox' onSubmit={onFormSubmit}> 
                 <select  className='selectCategory'  onChange={onCategoryHandle}>
-                    <option value={0}>all</option>
+                    <option className='selectOption' value={0}>
+                        <span className='selectOption'>all</span>
+                    </option>
                     {category ? category.map(category=>
-                        <option value={category.id} key={category.id}>
-    	                   {category.name}
+                        <option className='selectOption' value={category.id} key={category.id}>
+    	                   <span className='selectOption' >{category.name}</span>
                         </option>
                     ) : ''}
               

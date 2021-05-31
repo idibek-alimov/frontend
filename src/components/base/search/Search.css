@@ -26,6 +26,7 @@
 
 .selectCategory{
 	border:none;
+    padding-left: 5px;
 	padding-top:8px;
 	padding-bottom: 8px;
 	border-radius: 10px;
@@ -34,3 +35,7 @@
 	-moz-appearance: none;
 }
 .selectCategory::-ms-expand {    display: none;}
+
+.selectOption{
+    padding-left: 4px;
+}

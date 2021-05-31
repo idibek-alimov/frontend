@@ -1,4 +1,5 @@
 export const TRANSLATION_EN = { 
+    hello: 'Hello',
     founder: 'Alimov foundation',
     addProduct: 'add product',
     logout: 'logout',

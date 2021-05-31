@@ -2,12 +2,12 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Product from './product/Product'
 import './List.css'
-
+import {store} from '../../../store/store'
 
 const List = () => {
     const [products,setProducts] = useState()
     useEffect(()=>{
-        axios.get('https://maryam-backend.herokuapp.com')
+        axios.get('https://maryam-backend.herokuapp.com',store.getState().token)
              .then(res=>setProducts(res.data.results))
              .catch(err=>console.log('failed'))      
     },[])
