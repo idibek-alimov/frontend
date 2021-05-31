@@ -5,7 +5,7 @@ import './Product.css'
 import {Link} from 'react-router-dom'
 import {addToCart} from '../../../../store/actions'
 import ShoppingCartOutlinedIcon from '../../../../../node_modules/@material-ui/icons/ShoppingCartOutlined';
-import Like from '../../like/Like'
+
 
 const Product = (props) => {
     
@@ -29,7 +29,7 @@ const Product = (props) => {
                   }}>
                  <ShoppingCartOutlinedIcon className=''/>
           </button> */}
-          {/* <Like likes={props.product.likes_product}/> */}
+          
           </div>
       </div>
     </div>  
