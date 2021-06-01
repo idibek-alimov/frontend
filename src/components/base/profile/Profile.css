@@ -26,3 +26,12 @@
     text-decoration: none;
     color:black;
 }
+.profileTrans{
+    display:none;
+}
+@media screen and (max-width: 540px) {
+    .profileTrans{
+        
+        display:flex;
+    }
+}

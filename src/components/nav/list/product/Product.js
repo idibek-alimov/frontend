@@ -24,11 +24,7 @@ const Product = (props) => {
           </div>
           </Link>
           <div className='cartAndLikeBox'>
-          {/* <button className='addToCart' onClick={()=>{
-                  store.dispatch(addToCart(props.product))
-                  }}>
-                 <ShoppingCartOutlinedIcon className=''/>
-          </button> */}
+          
           
           </div>
       </div>

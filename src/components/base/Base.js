@@ -25,8 +25,8 @@ const Base = () => {
                     </Link>
                     <ConnectedCartCount className='baseCartCount' />
                 </div>
-                <div>
-                    <Trans />
+                <div className='baseTrans'>
+                    <Trans  />
                 </div>
                 <div>
                   { localStorage.getItem('token') ? 

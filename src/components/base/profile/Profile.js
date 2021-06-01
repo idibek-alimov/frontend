@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import DehazeIcon from '../../../../node_modules/@material-ui/icons/Dehaze';
 import { useTranslation } from "react-i18next";
 import '../../../locals/i18n';
-
+import Trans from '../translation/Trans'
 
 const Profile = () => {
     const { t } = useTranslation(); 
@@ -24,6 +24,9 @@ const Profile = () => {
                     <span onClick={onLogout}>{t("logout")}</span> 
                     <p></p>
                     <span className='addProductLink'><Link className='addProductLink' to='/myproducts'>{t("myProducts")}</Link></span>
+                    <div className='profileTrans'>
+                        <Trans  />
+                    </div>
                 </div>
                 
         </div>

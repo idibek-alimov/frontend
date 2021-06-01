@@ -39,3 +39,14 @@
 .selectOption{
     padding-left: 4px;
 }
+
+@media screen and (max-width: 540px) {
+    .selectCategory{
+        display:none;
+    }
+    .searchInput{
+        margin-left:1px;
+        border-radius: 10px;
+    }
+    
+}

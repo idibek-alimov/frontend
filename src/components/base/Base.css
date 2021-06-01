@@ -8,7 +8,7 @@
 	padding: 1px;
     display: flexbox;
     flex-direction: block;
-    margin: -8px -18px 0px -8px;
+    margin: -8px 0px 0px -8px;
     padding: 5px;
     
 } 
@@ -48,4 +48,9 @@
 .cartLink{
     text-decoration: none;
     color: white;
+}
+@media screen and (max-width: 540px) {
+   .baseTrans{
+       display: none;
+   }
 }
