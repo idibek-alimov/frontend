@@ -18,7 +18,7 @@ const Search = () => {
              .catch(err=>console.log('error in search.tj'))
     },[])
 
-    store.getState().category.map(category=>console.log(category.name))
+
     const onInputChange = (evt) => {
         search= evt.target.value
     }
