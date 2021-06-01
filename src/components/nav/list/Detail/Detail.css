@@ -8,8 +8,8 @@
 .detailPic{
     border:1px solid black;
     border-radius: 7px;
-    width: 25%;
-    height: 200px;
+    width: 40%;
+    height: 40%;
     text-align: center;
     align-content: center;
 
@@ -22,13 +22,13 @@
 .detailNamePrice{
     padding:10px;
     margin:10px;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
 }
-.detailNamePrice span {
-    
-    padding:10px;
-}
+
 .detailSize{
     padding:10px;
     margin:10px;
@@ -37,7 +37,10 @@
     padding:10px;
     margin:10px;
 }
-.detailPicImage{
-    width: 300px;
-    height: 200px;
+@media screen and (max-width: 540px) {
+    .detailPic{
+        width:90%;
+        height:90%;
+    }
+
 }

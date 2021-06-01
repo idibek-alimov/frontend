@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import './Search.css'
 import {store}from '../../../store/store'
-import {refreshTheSearch} from '../../../store/actions'
+import {refreshTheSearch,createCategory} from '../../../store/actions'
 import {Redirect,useHistory} from 'react-router-dom'
 import axios from 'axios'
 import SearchIcon from '../../../../node_modules/@material-ui/icons/Search';
@@ -10,15 +10,15 @@ const Search = () => {
     let search='';
     let categoryID = 0;
     let history = useHistory();
-    const [category,setCategory] = useState()
+    
     
     useEffect(()=>{
-        axios.get('https://maryam-backend.herokuapp.com/subcategory')
-             .then(res=>setCategory(res.data.results))
-             .catch(err=>console.log(err))
+        axios.get('https://maryam-backend.herokuapp.com/subcategory',store.getState().token)
+             .then(res=>{store.dispatch(createCategory(res.data.results))})
+             .catch(err=>console.log('error in search.tj'))
     },[])
 
-    
+    store.getState().category.map(category=>console.log(category.name))
     const onInputChange = (evt) => {
         search= evt.target.value
     }
@@ -38,13 +38,13 @@ const Search = () => {
             <form className='searchBox' onSubmit={onFormSubmit}> 
                 <select  className='selectCategory'  onChange={onCategoryHandle}>
                     <option className='selectOption' value={0}>
-                        <span className='selectOption'>all</span>
+                        all
                     </option>
-                    {category ? category.map(category=>
-                        <option className='selectOption' value={category.id} key={category.id}>
-    	                   <span className='selectOption' >{category.name}</span>
+                    {store.getState().category ? store.getState().category.map(category=>{
+                       return <option className='selectOption' value={category.id} key={category.id}>
+    	                   {category.name}
                         </option>
-                    ) : ''}
+                        }) : ''}
               
                 </select>
                 <input className='searchInput' onChange={onInputChange} />

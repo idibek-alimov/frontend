@@ -7,4 +7,8 @@ export const TRANSLATION_RU = {
     signup: 'Регистрация',
     myProducts: 'мои продукты',
     searchResults: ' Результаты по вашему запросу ',
+    name:'Название',
+    price:'Цена',
+    size:'Размер',
+    description:'Описание',
 };

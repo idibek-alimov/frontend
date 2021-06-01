@@ -7,4 +7,8 @@ export const TRANSLATION_TJ = {
     signup: 'Бакайдгири',
     myProducts: 'махсулотхои ман',
     searchResults: 'Натичахои чустучуи шумо',
+    name:'Ном',
+    price:'Нарх',
+    size:'Андоза',
+    description:'Тавсиф',
 };

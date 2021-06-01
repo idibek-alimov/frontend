@@ -4,10 +4,11 @@ import axios from 'axios'
 import ShoppingCartOutlinedIcon from '../../../../../node_modules/@material-ui/icons/ShoppingCartOutlined';
 import {store} from '../../../../store/store'
 import {addToCart} from '../../../../store/actions'
-
+import { useTranslation } from "react-i18next";
+import '../../../../locals/i18n';
 
 const Detail = ({match}) => {
-    //console.log(match.params.id)
+    const { t } = useTranslation()
     const [product,setProduct] = useState()
 
     useEffect(()=>{
@@ -20,24 +21,24 @@ const Detail = ({match}) => {
     return <div>
         {product ?
         <div className='detailBox'>
-            <div className='detailPic'>
-                <img className='detailPicImage' src={product.image}/>
+            <div >
+                <img className='detailPic' src={product.image}/>
             </div>
             <div className='detailData'>
                 <div className='detailNamePrice'>
-                    <span>Name: {product.name}</span>
-                    <span>Price:{product.price} .cc</span>
+                    <span>{t("name")} : <b>{product.name}</b></span>
+                    <span>{t("price")} : <b>{product.price} .cc</b></span>
                 </div>
                 <div className='detailSize'>
-                    <span> Sizes: {product.size.map(size=>{
-                        return <span> { size }  </span>
+                    <span> {t("size")} : {product.size.map(size=>{
+                        return <span> <b>{ size }</b>  </span>
                         }
                         )
                         }
                     </span>
                 </div>
                 <div className='detailDescription'>
-                    <p>{product.description}</p>
+                     <p>{t("description")} : <b>{product.description}</b></p>
                 </div>
             </div>
             <div>

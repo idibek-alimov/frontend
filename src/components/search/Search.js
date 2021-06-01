@@ -10,7 +10,7 @@ const Search = ({ search }) =>{
   const { t } = useTranslation();
   useEffect(()=>{
       axios.get(`https://maryam-backend.herokuapp.com/${search.categoryID}/${search.searchText}`)
-           .then(res=>setProducts(res.data.results))
+           .then(res=>{setProducts(res.data.results);console.log(res.data.results)})
            .catch(err=>console.log(err))
            
   },[])

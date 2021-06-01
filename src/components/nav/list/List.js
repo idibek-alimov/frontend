@@ -5,9 +5,11 @@ import './List.css'
 import {store} from '../../../store/store'
 
 const List = () => {
+    
+    let config = store.getState().token
     const [products,setProducts] = useState()
     useEffect(()=>{
-        axios.get('https://maryam-backend.herokuapp.com',store.getState().token)
+        axios.get('https://maryam-backend.herokuapp.com')
              .then(res=>setProducts(res.data.results))
              .catch(err=>console.log('failed'))      
     },[])

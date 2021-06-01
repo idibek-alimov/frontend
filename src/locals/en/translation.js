@@ -7,4 +7,8 @@ export const TRANSLATION_EN = {
     signup: 'Sign Up',
     myProducts: 'my products',
     searchResults: 'Results for your search',
+    name:'Name',
+    price:'Price',
+    size:'Size',
+    description:'Description',
 };
