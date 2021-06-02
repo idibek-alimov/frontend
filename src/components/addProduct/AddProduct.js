@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import './AddProduct.css'
 import axios from 'axios'
 import {store} from '../../store/store'
-
+import { useTranslation } from "react-i18next";
+import '../../locals/i18n';
 
 let config = {};
 if (localStorage.getItem('token')){ 
@@ -14,6 +15,7 @@ if (localStorage.getItem('token')){
   };
 }
 const AddProduct = () => {
+    const { t } = useTranslation()
     const [url,setUrl] = useState()
     const [category,setCategory] = useState();
     const [newCategory,setNewCategory]  = useState()
@@ -46,36 +48,36 @@ const AddProduct = () => {
     }
     return <div>
         <div className='addProductBox'>
-            <h1>add You product here</h1>
+            <h1>{t("addproductpage")}</h1>
             <div className='addProductInput'>
                 <form onSubmit={onSubmitForm}>
-                  <h2>Add your product</h2>
+                  
 		          <label>
-			        <p>Category</p>
+			        <p>{t("category")}</p>
                     <select onChange={evt=>{setNewCategory(evt.target.value)}} className='input'>
                       {category ? category.map(category=><option value={category.id}>{category.name}</option>) : ''}
                     </select>
   		          </label>
                   <label>
-			        <p>Name</p>
+			        <p>{t("name")}</p>
 			        <input type="text"  className='input' name='name' onChange={evt=>{setName(evt.target.value)}}/>
                   </label> 
                   <label>
-			        <p>Price</p>
+			        <p>{t("price")}</p>
 			        <input type="text"  className='input' name='price' onChange={evt=>{setPrice(evt.target.value)}}/>
                     </label>
                     <div>
                       {/* <img className="listImage" src={url} alt='some pic'/> */}
                     </div>
                     <label>
-			          <p>Image</p>
+			          <p>{t("image")}</p>
 			          <input type="file" 
                              name='image' 
                              accept="image/png, image/jpeg" 
                              onChange={evt=>{setImage(evt.target.files[0]);setUrl(URL.createObjectURL(evt.target.files[0]))}}/>
                       </label>
 	 	              <label>
-			            <p>Description</p>
+			            <p>{t('description')}</p>
 			            <textarea type="text" className='input' name='description' onChange={evt=>{setDescription(evt.target.value)}}/>
                       </label>
 		              <div>

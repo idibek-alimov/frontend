@@ -7,6 +7,7 @@ export const addToCart = (product) =>{
         id : product.id,
         name : product.name,
         price : product.price,
+        size: product.size,
         image : product.image,
         description : product.description,
         author : product.author,

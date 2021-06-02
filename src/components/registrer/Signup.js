@@ -2,9 +2,12 @@ import React from 'react'
 import axios from 'axios'
 import useToken from './useToken'
 import {Redirect} from 'react-router-dom'
+import { useTranslation } from "react-i18next";
+import '../../locals/i18n';
 
 const Signup = () => {
 
+    const { t } = useTranslation()
     const { token ,setToken} = useToken();
     let credentials = {
         'username':'',
@@ -30,15 +33,28 @@ const Signup = () => {
     }
     
     return <div>
-        <div>
-            <h1>Please log in</h1>
+        <div className='loginBox'>
+            <h1>{t('signuppage')}</h1>
             <div>
                 <form onSubmit={onFormSubmit}>
-                  <input name='username' onChange={onInputChange} placeholder='username'/>
-                  <input name='email' type='email' onChange={onInputChange} placeholder='email'/>
-                  <input name='password1' type='password' onChange={onInputChange} placeholder='password'/>
-                  <input name='password2' type='password' onChange={onInputChange} placeholder='password confirm'/>
-                  <button type='sumbit'>sumbit</button>
+                    <label>
+                        <p><h3>{t("username")}</h3></p>
+                        <input className='input' name='username' onChange={onInputChange} placeholder={t("username")} />     
+                    </label>
+                    <label>
+                        <p><h3>{t("email")}</h3></p>
+                        <input className='input' name='email' type='email' onChange={onInputChange} placeholder={t("email")}/>
+                    </label>
+                    <label>
+                        <p><h3>{t("password")}</h3></p>
+                        <input className='input' name='password1' type='password' onChange={onInputChange} placeholder={t('password')} />
+                    </label>  
+                    <label>
+                        <p><h3>{t("passwordconfirm")}</h3></p>
+                        <input className='input' name='password2' type='password' onChange={onInputChange} placeholder={t('passwordconfirm')} />
+                    </label>
+                    <p></p>
+                 <button className='submitButton' type='sumbit'>sumbit</button>
                 </form>
             </div>
         </div>
