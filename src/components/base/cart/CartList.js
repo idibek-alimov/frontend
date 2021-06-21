@@ -1,8 +1,14 @@
 import React from 'react'
 import Product from './Product'
-
-const CartList = ({ products }) =>
-  <div>
+import CheckOut from './CheckOut'
+const CartList = ({ products }) =>{
+  let ids = []
+  products.map(product=>{
+    ids.push(product.id)
+    
+  })
+  console.log(ids)
+  return  <div>
     
     {products.map(
       (product, i) =>
@@ -10,7 +16,7 @@ const CartList = ({ products }) =>
           <Product {...product} />
         </div>
     )}
-    
+    <CheckOut products={products}/>
   </div>
-
+}
 export default CartList
