@@ -11,9 +11,9 @@ const CheckOut = ({products}) => {
     useEffect(()=>{
       products.map(product=>ids.push(product.id))
     },[])
-    
+    console.log(store.getState().token)
     const onCheckOutHandle = () =>{
-        axios.post('https://maryam-backend.herokuapp.com/toorder',{"product":ids},store.getState().token)
+        axios.post('http://127.0.0.1:8000/toorder',{"product":ids},store.getState().token)
              .then(res=>console.log(res))
              .catch(err=>console.log(err))
         
